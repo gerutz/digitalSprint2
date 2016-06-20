@@ -1,0 +1,239 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'isntall', '-g', 'update' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'update', null ]
+7 verbose cache add spec update
+8 silly cache add parsed spec { raw: 'update',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'update',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed update@*
+10 verbose addNamed "*" is a valid semver range for update
+11 silly addNameRange { name: 'update', range: '*', hasData: false }
+12 silly mapToRegistry name update
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/update
+16 verbose addNameRange registry:https://registry.npmjs.org/update not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/update
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 4:28:31 PM
+20 verbose request id 81ce8033d812dbc4
+21 http request GET https://registry.npmjs.org/update
+22 http 200 https://registry.npmjs.org/update
+23 silly get cb [ 200,
+23 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly get     etag: '"CZ6D6CM10G9ROFBSVVU2IPUAE"',
+23 silly get     'content-type': 'application/json',
+23 silly get     'content-encoding': 'gzip',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     'content-length': '6481',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     date: 'Mon, 20 Jun 2016 20:28:32 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-jfk1042-JFK',
+23 silly get     'x-cache': 'MISS',
+23 silly get     'x-cache-hits': '0',
+23 silly get     'x-timer': 'S1466454512.801712,VS0,VE20',
+23 silly get     vary: 'Accept-Encoding' } ]
+24 verbose get saving update to /Users/gerutz/.npm/registry.npmjs.org/update/.cache.json
+25 silly addNameRange number 2 { name: 'update', range: '*', hasData: true }
+26 silly addNameRange versions [ 'update',
+26 silly addNameRange   [ '0.1.0',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.3.0-beta',
+26 silly addNameRange     '0.3.1-beta',
+26 silly addNameRange     '0.3.2-beta',
+26 silly addNameRange     '0.3.3-beta',
+26 silly addNameRange     '0.3.3',
+26 silly addNameRange     '0.3.5',
+26 silly addNameRange     '0.3.6',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.1',
+26 silly addNameRange     '0.4.2' ] ]
+27 silly addNamed update@0.4.2
+28 verbose addNamed "0.4.2" is a plain semver version for update
+29 silly mapToRegistry name update
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/update
+33 verbose addRemoteTarball https://registry.npmjs.org/update/-/update-0.4.2.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/update/-/update-0.4.2.tgz',
+34 verbose addRemoteTarball   '04c3bf907b653522c83a19d17879370b51097657' ]
+35 info retry fetch attempt 1 at 4:28:32 PM
+36 info attempt registry request try #1 at 4:28:32 PM
+37 http fetch GET https://registry.npmjs.org/update/-/update-0.4.2.tgz
+38 http fetch 200 https://registry.npmjs.org/update/-/update-0.4.2.tgz
+39 silly fetchAndShaCheck shasum 04c3bf907b653522c83a19d17879370b51097657
+40 verbose addTmpTarball /var/folders/3_/fnl36jmd6q58yw26_w22f1br0000gn/T/npm-63041-f75bba33/registry.npmjs.org/update/-/update-0.4.2.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for update@0.4.2
+42 silly cache afterAdd update@0.4.2
+43 verbose afterAdd /Users/gerutz/.npm/update/0.4.2/package/package.json not in flight; writing
+44 verbose afterAdd /Users/gerutz/.npm/update/0.4.2/package/package.json written
+45 silly install resolved [ { name: 'update',
+45 silly install resolved     description: 'Easily keep anything in your project up-to-date by installing the updaters you want to use and running `update` in the command line! Update the copyright date, licence type, ensure that a project uses your latest eslint or jshint configuration, remove dep',
+45 silly install resolved     version: '0.4.2',
+45 silly install resolved     homepage: 'https://github.com/update/update',
+45 silly install resolved     author:
+45 silly install resolved      { name: 'Jon Schlinkert',
+45 silly install resolved        url: 'https://github.com/jonschlinkert' },
+45 silly install resolved     authors:
+45 silly install resolved      [ 'Brian Woodward <brian.woodward@gmail.com> (https://github.com/doowb)',
+45 silly install resolved        'Jon Schlinkert (https://github.com/jonschlinkert)' ],
+45 silly install resolved     contributors: [ [Object], [Object] ],
+45 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/update/update.git' },
+45 silly install resolved     bugs: { url: 'https://github.com/update/update/issues' },
+45 silly install resolved     license: 'MIT',
+45 silly install resolved     files: [ 'bin', 'index.js', 'lib/' ],
+45 silly install resolved     main: 'index.js',
+45 silly install resolved     engines: { node: '>=0.10.0' },
+45 silly install resolved     scripts: { test: 'mocha' },
+45 silly install resolved     preferGlobal: true,
+45 silly install resolved     bin: { update: 'bin/update.js' },
+45 silly install resolved     dependencies:
+45 silly install resolved      { 'ansi-cyan': '^0.1.1',
+45 silly install resolved        'ansi-gray': '^0.1.1',
+45 silly install resolved        'ansi-green': '^0.1.1',
+45 silly install resolved        'ansi-red': '^0.1.1',
+45 silly install resolved        'ansi-yellow': '^0.1.1',
+45 silly install resolved        'assemble-core': '^0.8.0',
+45 silly install resolved        'assemble-loader': '^0.2.6',
+45 silly install resolved        async: '^1.5.2',
+45 silly install resolved        base: '^0.6.3',
+45 silly install resolved        'base-cli': '^0.4.0',
+45 silly install resolved        'base-config': '^0.3.3',
+45 silly install resolved        'base-options': '^0.5.4',
+45 silly install resolved        'base-pipeline': '^0.1.4',
+45 silly install resolved        'base-store': '^0.3.2',
+45 silly install resolved        'composer-runtimes': '^0.7.0',
+45 silly install resolved        'define-property': '^0.2.5',
+45 silly install resolved        'engine-base': '^0.1.2',
+45 silly install resolved        'expand-args': '^0.3.1',
+45 silly install resolved        'expand-object': '^0.4.1',
+45 silly install resolved        'export-files': '^2.1.0',
+45 silly install resolved        'extend-shallow': '^2.0.1',
+45 silly install resolved        'for-own': '^0.1.3',
+45 silly install resolved        'get-value': '^2.0.2',
+45 silly install resolved        'global-modules': '^0.2.0',
+45 silly install resolved        'gulp-eslint': '^1.1.1',
+45 silly install resolved        'lazy-cache': '^1.0.3',
+45 silly install resolved        'load-pkg': '^3.0.1',
+45 silly install resolved        matched: '^0.4.1',
+45 silly install resolved        micromatch: '^2.3.7',
+45 silly install resolved        minimist: '^1.2.0',
+45 silly install resolved        'object.omit': '^2.0.0',
+45 silly install resolved        'object.pick': '^1.1.1',
+45 silly install resolved        'parser-front-matter': '^1.3.0',
+45 silly install resolved        'project-name': '^0.2.3',
+45 silly install resolved        'question-cache': '^0.3.5',
+45 silly install resolved        rimraf: '^2.5.0',
+45 silly install resolved        'set-value': '^0.3.2',
+45 silly install resolved        'sort-object-arrays': '^0.1.1',
+45 silly install resolved        'stream-exhaust': '^1.0.1',
+45 silly install resolved        'success-symbol': '^0.1.0',
+45 silly install resolved        through2: '^2.0.0',
+45 silly install resolved        'time-stamp': '^0.1.3',
+45 silly install resolved        'union-value': '^0.2.1',
+45 silly install resolved        use: '^1.1.2' },
+45 silly install resolved     devDependencies:
+45 silly install resolved      { 'buffer-equal': '^1.0.0',
+45 silly install resolved        consolidate: '^0.13.1',
+45 silly install resolved        coveralls: '^2.11.6',
+45 silly install resolved        'data-store': '^0.12.1',
+45 silly install resolved        'engine-handlebars': '^0.8.0',
+45 silly install resolved        'event-stream': '^3.3.2',
+45 silly install resolved        'graceful-fs': '^4.1.2',
+45 silly install resolved        gulp: '^3.9.0',
+45 silly install resolved        'gulp-format-md': '^0.1.5',
+45 silly install resolved        'gulp-istanbul': '^0.10.3',
+45 silly install resolved        'gulp-mocha': '^2.2.0',
+45 silly install resolved        'is-buffer': '^1.1.1',
+45 silly install resolved        istanbul: '^0.4.1',
+45 silly install resolved        'kind-of': '^3.0.2',
+45 silly install resolved        mocha: '^2.3.4',
+45 silly install resolved        'resolve-glob': '^0.1.8',
+45 silly install resolved        should: '^8.0.2',
+45 silly install resolved        sinon: '^1.17.2',
+45 silly install resolved        swig: '^1.4.2',
+45 silly install resolved        vinyl: '^1.1.0' },
+45 silly install resolved     keywords: [ 'lint', 'next', 'repo', 'update' ],
+45 silly install resolved     verb:
+45 silly install resolved      { related: [Object],
+45 silly install resolved        reflinks: [Object],
+45 silly install resolved        plugins: [Object],
+45 silly install resolved        data: [Object] },
+45 silly install resolved     update:
+45 silly install resolved      { note: 'this is just pseudo data for tests. I\'ll update with real stuff soon.',
+45 silly install resolved        cwd: 'lib/pipeline',
+45 silly install resolved        helpers: [Object],
+45 silly install resolved        plugins: [Object],
+45 silly install resolved        set: [Object] },
+45 silly install resolved     gitHead: 'de0e1344b048505ed5e49c1b1618a86f98f999e4',
+45 silly install resolved     _id: 'update@0.4.2',
+45 silly install resolved     _shasum: '04c3bf907b653522c83a19d17879370b51097657',
+45 silly install resolved     _from: 'update@*',
+45 silly install resolved     _npmVersion: '3.3.12',
+45 silly install resolved     _nodeVersion: '5.3.0',
+45 silly install resolved     _npmUser: { name: 'jonschlinkert', email: 'github@sellside.com' },
+45 silly install resolved     maintainers: [ [Object] ],
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '04c3bf907b653522c83a19d17879370b51097657',
+45 silly install resolved        tarball: 'https://registry.npmjs.org/update/-/update-0.4.2.tgz' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/update/-/update-0.4.2.tgz' } ]
+46 info install update@0.4.2 into /usr/local/lib
+47 info installOne update@0.4.2
+48 verbose installOne of update to /usr/local/lib not in flight; installing
+49 verbose lock using /Users/gerutz/.npm/_locks/update-a554ca6fd1dfb67b.lock for /usr/local/lib/node_modules/update
+50 silly install write writing update 0.4.2 to /usr/local/lib/node_modules/update
+51 verbose unbuild lib/node_modules/update
+52 silly gentlyRm /usr/local/lib/node_modules/update is being purged from base /usr/local
+53 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/update
+54 verbose tar unpack /Users/gerutz/.npm/update/0.4.2/package.tgz
+55 verbose tar unpacking to /usr/local/lib/node_modules/update
+56 silly gentlyRm /usr/local/lib/node_modules/update is being purged
+57 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/update
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 error tar.unpack untar error /Users/gerutz/.npm/update/0.4.2/package.tgz
+60 verbose unlock done using /Users/gerutz/.npm/_locks/update-a554ca6fd1dfb67b.lock for /usr/local/lib/node_modules/update
+61 verbose fstream_path /usr/local/lib/node_modules/update
+62 verbose fstream_type Directory
+63 verbose fstream_class DirWriter
+64 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/update'
+64 verbose stack     at Error (native)
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+65 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+66 verbose cwd /Applications/MAMP/htdocs/dhSprint2/digitalSprint2
+67 error Darwin 14.4.0
+68 error argv "node" "/usr/local/bin/npm" "isntall" "-g" "update"
+69 error node v0.12.7
+70 error npm  v2.11.3
+71 error path /usr/local/lib/node_modules/update
+72 error code EACCES
+73 error errno -13
+74 error Error: EACCES, mkdir '/usr/local/lib/node_modules/update'
+74 error     at Error (native)
+74 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/update']
+74 error   errno: -13,
+74 error   code: 'EACCES',
+74 error   path: '/usr/local/lib/node_modules/update',
+74 error   fstream_type: 'Directory',
+74 error   fstream_path: '/usr/local/lib/node_modules/update',
+74 error   fstream_class: 'DirWriter',
+74 error   fstream_stack:
+74 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+74 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+74 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+75 error Please try running this command again as root/Administrator.
+76 verbose exit [ -13, true ]
+77 verbose unbuild lib/node_modules/update
+78 silly gentlyRm /usr/local/lib/node_modules/update is being purged from base /usr/local
+79 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/update
