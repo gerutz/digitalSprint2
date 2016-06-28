@@ -7,7 +7,15 @@ class usuarioRepositorioJSON extends usuarioRepositorio{
 
     public function existeMail($mail){
 
+        $usuarios = $this->getAllUsers();
 
+        foreach ($usuarios as $key=>$usuario){
+            if($mail == $usuario->getMail()){
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public function guardarUsuario(Usuario $miUsuario){
@@ -17,7 +25,7 @@ class usuarioRepositorioJSON extends usuarioRepositorio{
              $miUsuario->setId(traerNuevoId());
         }
 
-            $archivoUsuariosJSON = "../usuariosJSON";
+            $archivoUsuariosJSON = "usuarios.json";
 
             //convierto POST en Array
             $miUsuarioArray = $this->usuarioToArray($miUsuario);
@@ -31,8 +39,18 @@ class usuarioRepositorioJSON extends usuarioRepositorio{
     }
 
     public function traerNuevoId(){
+
+        if(!file_exists("usuarios.json")){
+            return 1;
+        }
         
-    
+        $miArchivo = file_get_contents("usuarios.json");
+        
+        $arrayUsuarios = explode(PHP_EOL,$miArchivo);
+        $ultimoUsuario =  $arrayUsuarios[count($arrayUsuarios) - 2];
+        $ultimoUsuarioArrray = json_decode($ultimoUsuario,true);
+        
+        return $ultimoUsuarioArrray['id'] + 1;
     }
 
     public function usuarioToArray(Usuario $usuario){
@@ -47,6 +65,10 @@ class usuarioRepositorioJSON extends usuarioRepositorio{
         $arrayUsuario['sexo'] = $usuario->getSexo();
 
         return $arrayUsuario;
+    }
+
+    public function getAllUsers(){
+        
     }
     
     
