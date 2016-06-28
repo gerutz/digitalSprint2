@@ -68,7 +68,17 @@ class usuarioRepositorioJSON extends usuarioRepositorio{
     }
 
     public function getAllUsers(){
-        
+        // Implementacion personal. Realizar debug para ver posibles errores.
+        $arrayObjetosUsuarios = [];
+
+        $arrayStringUsuarios = explode(PHP_EOL,"usuarios.php");
+
+        foreach ($arrayStringUsuarios as $stringUsuario) {
+            $arrayUsuario = json_encode($stringUsuario);
+            $arrayObjetosUsuarios[] = new Usuario($arrayUsuario);
+        }
+
+        return $arrayObjetosUsuarios;
     }
     
     
