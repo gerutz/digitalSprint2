@@ -9,9 +9,30 @@ class Auth {
     private  static  $instance = null;
 
     public static function getInstance(usuarioRepositorio $usuarioRepositorio){
+        if(Auth::$instance === null){
+            session_start();
+            Auth::$instance = new Auth();
+            Auth::$instance->setUsuarioRepositorio($usuarioRepositorio);
+            Auth::$instance->checkLogin();
+        }
+    }
+
+    private function setUsuarioRepositorio($usuarioRepositorio){
+        $this->usuarioRepositorio = $usuarioRepositorio;
+    }
+
+    private function __construct(){
 
     }
 
-    public function existeMail(){
+    public function checkLogin(){
+
+        if(!isset($_SESSION['usuarioLogueado'])){
+            if(isset($_COOCKIE['usuarioLogueado'])){
+                $idUsuario = $_COOKIE['usuarioLogueado'];
+                //$usuario = $this->usuarioRepositorio->get
+
+            }
+        }
     }
 }
