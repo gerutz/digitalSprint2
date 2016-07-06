@@ -24,15 +24,42 @@ class Auth {
     private function __construct(){
 
     }
-
+    
     public function checkLogin(){
 
         if(!isset($_SESSION['usuarioLogueado'])){
             if(isset($_COOCKIE['usuarioLogueado'])){
                 $idUsuario = $_COOKIE['usuarioLogueado'];
-                //$usuario = $this->usuarioRepositorio->get
-
+                $usuario = $this->usuarioRepositorio->getUsuarioById($idUsuario);
+                
+                $this->loguear($usuario);
             }
         }
     }
+
+    public function loguear($usuario){
+        $_SESSION['usuarioLogueado'] = $usuario;
+    }
+
+    public function logout(){
+        session_destroy();
+        $this->unSetCoockie('usuarioLogueado');
+    }
+
+    private function unSetCoockie($cookie){
+        setCookie($cookie, "", -1);
+    }
+
+    public function estaLogueado(){
+
+        return isset($_SESSION['usuarioLogueado']);
+
+    }
+
+    public function getUsuarioLogueado(){
+        return $_SESSION['usuarioLogueado'];
+    }
+
+    
+
 }

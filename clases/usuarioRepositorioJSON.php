@@ -80,7 +80,18 @@ class usuarioRepositorioJSON extends usuarioRepositorio{
 
         return $arrayObjetosUsuarios;
     }
-    
+
+    public function getUsuarioById($id){
+
+        $archivoUsuarios = $this->getAllUsers();
+
+        foreach ($archivoUsuarios as $usuario){
+            if($usuario->getId() == $id){
+                return $usuario;
+            }
+        }
+        return null;
+    }
     
 
 }
